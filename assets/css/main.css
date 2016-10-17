@@ -1,0 +1,127 @@
+body {
+  background-color: #d0d0d0;
+  background-image: url("../images/checker.png");
+  font-family: "Ubuntu";
+  margin: 0; }
+
+.parent-all {
+  margin: 0 auto;
+  width: 50%; }
+
+.presentation {
+  margin: 20px auto;
+  width: 70%;
+  text-align: center; }
+  .presentation h1 {
+    font-size: 45px;
+    text-shadow: 2px 2px 1.5px #fff; }
+  .presentation p {
+    color: #666666;
+    font-size: 14.5px;
+    line-height: 1.5;
+    text-align: justify; }
+
+.terminal {
+  margin: 40px auto;
+  width: 70%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8); }
+
+.hljs {
+  border-color: #666666;
+  border-style: solid;
+  border-width: 1.5px;
+  border-radius: 7px;
+  font-size: 15.5px;
+  padding: 1em;
+  text-align: left; }
+
+footer {
+  margin: 20px auto;
+  width: 70%; }
+
+a {
+  color: #4169e1;
+  text-decoration: none; }
+  a:visited {
+    color: #1a3ca2; }
+  a:hover {
+    color: ligthen(#4169e1, 20); }
+
+.gnome-terminal {
+  height: 400px; }
+  .gnome-terminal .header-terminal {
+    background-color: #4a4a44;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 30px; }
+  .gnome-terminal .content {
+    background-color: #33132a;
+    height: 370px;
+    overflow: auto;
+    position: relative;
+    white-space: nowrap;
+    width: 100%; }
+    .gnome-terminal .content .command-line {
+      color: #b0b0b0;
+      letter-spacing: 1px;
+      margin-left: 10px;
+      word-spacing: 1.5px; }
+      .gnome-terminal .content .command-line .prompt {
+        display: inline-block; }
+      .gnome-terminal .content .command-line .shell {
+        display: inline-block;
+        margin-left: 5px; }
+
+.list-btns-terminal {
+  list-style: none;
+  margin: 0;
+  padding: 1.5px 0; }
+  .list-btns-terminal li {
+    float: left;
+    margin-bottom: 0;
+    margin-left: 3.5px;
+    margin-right: 3.5px;
+    margin-top: 3px;
+    position: relative; }
+    .list-btns-terminal li:last-child {
+      color: #b0b0b0; }
+    .list-btns-terminal li:nth-child(1) {
+      border-color: #2f2f2c;
+      border-style: solid;
+      border-width: 0.3px;
+      background-color: #d44e2a; }
+      .list-btns-terminal li:nth-child(1)::after {
+        color: #4a4a44;
+        content: 'x';
+        font-size: 13px;
+        left: 28%;
+        position: absolute; }
+    .list-btns-terminal li:nth-child(2) {
+      border-color: #2f2f2c;
+      border-style: solid;
+      border-width: 0.3px;
+      background-color: #626056; }
+      .list-btns-terminal li:nth-child(2)::after {
+        bottom: -3.7px;
+        color: #4a4a44;
+        content: '-';
+        font-size: 25px;
+        left: 25%;
+        position: absolute; }
+    .list-btns-terminal li:nth-child(3) {
+      border-color: #2f2f2c;
+      border-style: solid;
+      border-width: 0.3px;
+      background-color: #626056; }
+      .list-btns-terminal li:nth-child(3)::after {
+        border: 1px solid #4a4a44;
+        bottom: 4.7px;
+        content: '';
+        height: 8px;
+        left: 3.5px;
+        position: absolute;
+        width: 8px; }
+  .list-btns-terminal .btn-terminal {
+    border-radius: 70px;
+    height: 18px;
+    width: 18px; }

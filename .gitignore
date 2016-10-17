@@ -1,4 +1,11 @@
 node_modules
 npm-debug.log
 source/scss/lib
-build
+source
+gulpfile.js
+*.json
+*.md
+*.yml
+.gitignore
+*.swp
+.bowerrc
