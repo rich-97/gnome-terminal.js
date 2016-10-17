@@ -1,0 +1,57 @@
+@mixin center-block($width, $margin: '') {
+  @if $margin == '' {
+    margin: 0 auto;
+  } @else {
+    margin: $margin * 1px auto;
+  }
+  width: $width * 1%;
+}
+
+body {
+  @include bgc($bg-body-color);
+  background-image: url($bgi-body-url + $bgi-body-basename);
+  font-family: $font-family;
+  margin: 0;
+}
+
+.parent-all {
+  @include center-block(50);
+}
+
+.presentation {
+  @include center-block(70, 20);
+  text-align: center;
+
+  h1 {
+    font-size: 45px;
+    text-shadow: $header-text-shadow;
+  }
+
+  p {
+    color: $color-txt;
+    font-size: 14.5px;
+    line-height: 1.5;
+    text-align: justify;
+  }
+}
+
+.terminal {
+  @include center-block(70, 40);
+  box-shadow: $term-box-shadow;
+}
+
+.hljs {
+  @include border(1.5, $color-txt);
+  border-radius: 7px;
+  font-size: 15.5px;
+  padding: 1em;
+  text-align: left;
+}
+
+footer {
+  @include center-block(70, 20);
+}
+
+a {
+  @include unstyled-link($color-link);
+}

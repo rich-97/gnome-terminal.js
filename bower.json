@@ -1,0 +1,29 @@
+{
+  "name": "gnome-terminal.js",
+  "description": "gnome terminal simulator",
+  "main": "./source/js/gnome-terminal.js",
+  "authors": [
+    "Ricardo Moreno"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "javascript",
+    "bash",
+    "shell",
+    "scss",
+    "html"
+  ],
+  "homepage": "https://rich-97.github.io/gnome-terminal.js",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./source/scss/lib/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mixins.scss": "*"
+  }
+}

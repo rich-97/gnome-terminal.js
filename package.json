@@ -1,0 +1,34 @@
+{
+  "name": "gnome-terminal.js",
+  "version": "1.0.0",
+  "description": "gnome terminal simulator",
+  "main": "./source/js/gnome-terminal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rich-97/gnome-terminal.js.git"
+  },
+  "keywords": [
+    "javascript",
+    "bash",
+    "shell",
+    "scss",
+    "html"
+  ],
+  "author": "Ricardo Moreno",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rich-97/gnome-terminal.js/issues"
+  },
+  "homepage": "https://github.com/rich-97/gnome-terminal.js#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-minify": "0.0.14",
+    "gulp-pug": "^3.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "semistandard": "^9.1.0"
+  }
+}
