@@ -45,7 +45,8 @@ $palette: (
     .command-line {
       color: $color-content;
       letter-spacing: $letter-spacing * $unity;
-      margin-left: 10px;
+      margin-left: 2.5px;
+      position: relative;
       word-spacing: $word-spacing * $unity;
 
       .prompt {
@@ -129,3 +130,18 @@ $palette: (
   }
 
 } // end .list-btns-terminal
+
+.cursor {
+  animation: cursor 1s infinite;
+  display: inline-block;
+  height: 15.5px;
+  margin-left: 3px;
+  position: absolute;
+  top: 2.2px;
+  width: 12.5px;
+}
+
+@keyframes cursor {
+  from {@include bgc(#fff)}
+  to {@include bgc((0, 0, 0, .1))}
+}
