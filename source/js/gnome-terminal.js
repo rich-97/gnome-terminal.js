@@ -1,17 +1,24 @@
 const $$ = document.querySelectorAll.bind(document);
 
-function create (args) {
-  if (args === 'div') {
-    return document.createElement('div');
-  } else if (args === 'span') {
-    return document.createElement('span');
-  } else if (args === 'ul') {
-    return document.createElement('ul');
-  } else if (args === 'li') {
-    return document.createElement('li');
-  } else {
-    return false;
-  }
+function isEmpty(element) {
+    if (element.childNodes[0] !== '') {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function createElement (element) {
+    var defaultEl = 'div';
+    var $element;
+
+    if (element) {
+        $element = document.createElement(element);
+    } else {
+        $element = document.createElement(defaultEl);
+    }
+
+    return $element;
 }
 
 function text (str) {
@@ -31,14 +38,18 @@ function build (param) {
     'command',
     'prompt'
   ];
+  
   // remove a content of #gnome-terminal
-  $divid.removeChild($divid.childNodes[0]);
+  if (!isEmpty($divid)) {
+      $divid.removeChild($divid.childNodes[0]);
+  }
+
   // add class gnome-terminal
   $divid.className = classlist[0];
   // append element header-terminal
-  $divid.appendChild(create('div'));
+  $divid.appendChild(createElement());
   // append element content
-  $divid.appendChild(create('div'));
+  $divid.appendChild(createElement());
   // add class header-terminal
   $divid.children[0].className = classlist[1];
   // add class content
@@ -46,7 +57,7 @@ function build (param) {
   // sons header-terminal and content
   const sons = $divid.children;
   // append ul to header-terminal
-  sons[0].appendChild(create('ul'));
+  sons[0].appendChild(createElement('ul'));
   // ul ~> list-btns-terminal
   const listsbtns = sons[0].children[0];
   // add class list-btns-terminal
@@ -54,7 +65,7 @@ function build (param) {
   // append li to listsbtns
   var i;
   for (i = 0; i < 4; i++) {
-    listsbtns.appendChild(create('li'));
+    listsbtns.appendChild(createElement('li'));
   }
   // add class to li
   for (i = 0; i < 3; i++) {
@@ -63,17 +74,17 @@ function build (param) {
   // add text content 'Terminal'
   listsbtns.children[3].textContent = 'Terminal';
   // append command to content element
-  sons[1].appendChild(create('div'));
+  sons[1].appendChild(createElement());
   // son of content (command)
   const soncontent = sons[1].children[0];
   // add class command
   soncontent.className = 'command-line';
   // append prompt to command element
-  soncontent.appendChild(create('div'));
+  soncontent.appendChild(createElement());
   // apppend shell to command element
-  soncontent.appendChild(create('span'));
+  soncontent.appendChild(createElement('span'));
   // append cursor
-  soncontent.appendChild(create('span'));
+  soncontent.appendChild(createElement('span'));
   // add class to prompt element
   const $prompt = soncontent.children[0];
   const $shell = soncontent.children[1];
@@ -82,13 +93,13 @@ function build (param) {
   $shell.className = 'shell';
   $cursor.className = 'cursor';
   // create a element span for 'user@user'
-  $prompt.appendChild(create('span'));
+  $prompt.appendChild(createElement('span'));
   // create element span for ':'
-  $prompt.appendChild(create('span'));
+  $prompt.appendChild(createElement('span'));
   // create element span for '~'
-  $prompt.appendChild(create('span'));
+  $prompt.appendChild(createElement('span'));
   // create element span for '$'
-  $prompt.appendChild(create('span'));
+  $prompt.appendChild(createElement('span'));
   // string of $prompt
   const usr = 'user@host';
   const $child = $prompt.children;
