@@ -1,7 +1,7 @@
 const $$ = document.querySelectorAll.bind(document);
 
 function isEmpty(element) {
-    if (element.childNodes[0] !== '') {
+    if (element.childNodes[0].textContent !== '') {
         return false;
     } else {
         return true;
