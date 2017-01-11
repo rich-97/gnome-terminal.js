@@ -1,7 +1,9 @@
 const $$ = document.querySelectorAll.bind(document);
 
 function isEmpty(element) {
-    if (element.childNodes[0].textContent !== '') {
+    var $child = element.childNodes[0];
+
+    if ($child !== undefined) {
         return false;
     } else {
         return true;
