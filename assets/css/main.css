@@ -48,15 +48,15 @@ a {
     color: ligthen(#4169e1, 20); }
 
 .gnome-terminal {
-  height: 400px; }
+  height: 250px; }
   .gnome-terminal .header-terminal {
     background-color: #4a4a44;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    height: 30px; }
+    height: 12%; }
   .gnome-terminal .content {
     background-color: #33132a;
-    height: 370px;
+    height: 88%;
     overflow: auto;
     position: relative;
     white-space: nowrap;
@@ -64,7 +64,8 @@ a {
     .gnome-terminal .content .command-line {
       color: #b0b0b0;
       letter-spacing: 1px;
-      margin-left: 10px;
+      margin-left: 2.5px;
+      position: relative;
       word-spacing: 1.5px; }
       .gnome-terminal .content .command-line .prompt {
         display: inline-block; }
@@ -125,3 +126,18 @@ a {
     border-radius: 70px;
     height: 18px;
     width: 18px; }
+
+.cursor {
+  animation: cursor 1s infinite;
+  display: inline-block;
+  height: 15.5px;
+  margin-left: 3px;
+  position: absolute;
+  top: 2.2px;
+  width: 12.5px; }
+
+@keyframes cursor {
+  from {
+    background-color: #fff; }
+  to {
+    background-color: rgba(0, 0, 0, 0.1); } }
